@@ -6,7 +6,8 @@ ENV ANT_VERSION 1.9.6
 ENV ANT_HOME $HOME/ant
 ENV PATH ${PATH}:${ANT_HOME}/bin
 
-USER root # TODO: This is probably a bad idea
+# TODO: This is probably a bad idea, but necessary due to parent image https://github.com/yukinying/chrome-headless-browser-docker/blob/master/chromedriver/Dockerfile#L7
+USER root
 
 # creates a script to find and set JAVA_HOME
 # stolen from openjdk docker : https://github.com/docker-library/openjdk/blob/e3386b5a2b4004da498e145cf840561d50acd7fb/7-jdk/Dockerfile
