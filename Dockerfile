@@ -1,5 +1,5 @@
-# We're using chrome-driver 2.35 which supports Chrome v62-64
-FROM yukinying/chrome-headless-browser-selenium:64.0.3282.24
+# We're using chrome-driver 2.35 which officially supports at least Chrome v62-64
+FROM yukinying/chrome-headless-browser-selenium:66.0.3346.8
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 ENV ANT_VERSION 1.9.6
