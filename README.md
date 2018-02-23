@@ -20,6 +20,7 @@ time docker run -t \
     -e "AUTOTEST_RETRY_COUNT=1" \
     -e "reportDir=/tmp/selenium-testrunner" \
     -e "outputSnippets=/tmp/selenium-testrunner/snippets.xml" \
+    -e "CHROMEDRIVER_LOG=/tmp/chromedriver.log" \
     videoblocks/selenium-testrunner \
-    bash -c "env && ant runtest -f /autotest/build.xml -Dtest=TestVBJoinBrowse -Dmethods=testAnnualOnlySignUp"
+    bash -c "env && ant clean && ant jar && ant runtest -f /autotest/build.xml -Dtest=TestVBJoinBrowse -Dmethods=testAnnualOnlySignUp"
 ```
