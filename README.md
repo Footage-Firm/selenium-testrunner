@@ -18,9 +18,10 @@ time docker run -t \
     -e "AUTOTEST_AB_TARGET_BASE_URL=https://test.audioblocks.com" \
     -e "CHROMEDRIVER_FILENAME=/autotest/lib/chromedriver-latest/chromedriver_linux" \
     -e "AUTOTEST_RETRY_COUNT=1" \
+    -e "AUTOTEST_ENABLE_HEADLESS=true" \
+    -e "CHROMEDRIVER_LOG=/tmp/chromedriver.log" \
     -e "reportDir=/tmp/selenium-testrunner" \
     -e "outputSnippets=/tmp/selenium-testrunner/snippets.xml" \
-    -e "CHROMEDRIVER_LOG=/tmp/chromedriver.log" \
     videoblocks/selenium-testrunner \
     bash -c "env && ant clean && ant jar && ant runtest -f /autotest/build.xml -Dtest=TestVBJoinBrowse -Dmethods=testAnnualOnlySignUp"
 ```
